@@ -38,28 +38,28 @@
 		</div>
 		<img class="square five-16ths" src="" alt="Table with painting equipment for a group.">
 	</section>
-	<div class="spaced-out horizontal">
-		<article class="card red">
-			<h2>Paint on canvas with acrylics</h2>
+	<div id="product-cards" class="spaced-out horizontal">
+		<article class="text-card red">
+			<h2 class="card-heading">Paint on canvas with acrylics</h2>
 			<p>Paint on canvas like the real masters, but in easy mode. Acrylics dry quicker and can be cleaned with water before they dry.
 				No solvants or dangerous chemicals required (just don't eat the paint).
 			</p>
 		</article>
-		<article class="card violet">
-			<h2>Blend watercolors</h2>
+		<article class="text-card violet">
+			<h2 class="card-heading">Blend watercolors</h2>
 			<p>on real watercolor paper. Not only are watercolors waterbased (duh), but they blend beautifully as well. With specialiced paper,
 				the paint soaks into the fibers and partially blend inside the paper in interesting ways as well.</p>
 		</article>
-		<article class="card green">
-			<h2>Build your own mosaic</h2>
+		<article class="text-card green">
+			<h2 class="card-heading">Build your own mosaic</h2>
 			<p>using colored stones, rubber and adhesive, compose colorful geometric patterns and shapes. Many find this activity deeply calming and stimulating
 				at the same time. Find your inner Zen or let out your creativity show to the rest of your group.</p>
 		</article>
 	</div>
 	<section>
-		<div class="spaced-out">
+		<div class="spaced-out horizontal">
 			<h2>Ready to find your inner creative?</h2>
-			<button class="purple">book a workshop</button>
+			<a class="button-link purple">book a workshop</a>
 		</div>
 		<p>Come as you are, no skill required, all material included. Build creative communication with your work team.
 			Bring your family and friends for a	stress-reducing afternoon. Get to know new people in your local circle.
@@ -68,5 +68,27 @@
 			Call us on +47 923 85 123 or get in contact with our team on help.craftvilla.com! We want your experience to be frictionless and tailor fit.
 		</p>
 	</section>
+	<div class="spaced-out horizontal">
+		<div id="featured-reviews" class="spaced-out vertical five-16ths">
+			<template id="review-card-template">
+				<article class="review-card">
+					<h2 class="card-subheading">Name of Reviewer</h2>
+					<div class="spaced-out horizontal">
+						<img>
+						<section>
+							<h3 class="card-heading">Artform</h3>
+							<p class="card-text">Review Content</p>
+						</section>
+					</div>
+				</article>
+			</template>
+		</div>
+	</div>
+	<!-- TODO: A lot of nested structuring divs that cannot be sections as they are not identified. 
+	Might be possible to identify programmatically w. f.ex. aria-labels etc. -->
+	<div class="spaced-out vertical">
+		<div id="img-grid" data-column-count="3" data-row-count="2"></div>
+		<a class="inside-flow" href="src/html/gallery.html">Look at more pictures in our gallery</a>
+	</div>
 </body>
 </html>
