@@ -18,7 +18,7 @@ export const reviews = [[
 		},
 		{
 			name: 'performative-male98',
-			img: 'watercolor/blue-orange-comp',
+			img: 'watercolor/blue-orange-comp.jpg',
 			text: 'Just casually enjoying this advanced watercoloring class. Nothing mutch. Just happened to pass by the place and thought I try anything once. Maybe you wanna try something out with me? ;)'
 		},
 		{
