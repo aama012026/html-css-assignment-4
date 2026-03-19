@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Craftvilla - Give us feedback</title>
+</head>
+<body>
+<main class="spaced-out horizontal">
+	<div class="eight-16ths">
+		<h1 class="text-blue">Tell us your thoughts</h1>
+		<h2 class="violet-light">Help us get better</h2>
+		<form id="feedback-form">
+			<select name="artform" id="artform-select">
+				<option value="acrylics">Acrylics</option>
+				<option value="watercolors">Watercolors</option>
+				<option value="mosaic">Mosaic</option>
+			</select>
+			<label for="artform-select" class="violet-dark accent-text">What workshop did you attend?</label>
+			<input type="text" name="companions" id="companions-input" placeholder="family, friends, colleagues, other...">
+			<label for="companions-input" class="violet-dark accent-text">Who did you go with?</label>
+			<!-- This would be an <input type="file"> in a functional form, but for ease of styling <button> is used -->
+			<button type="button" class="violet fill">upload image</button>
+			<label for="image-upload" class="violet-dark accent-text">Share a picture?</label>
+			<textarea name="experience" id="experience-textarea" placeholder="type your answer here..."></textarea>
+			<label for="experience-textarea" class="violet-dark accent-text">How was your experience?</label>
+			<button type="submit" class="purple">send</button>
+		</form>
+	</div>
+	<div id="example-reviews" class="spaced-out vertical five-point-five-16ths">
+		<template id="review-card-template">
+			<article class="review-card">
+				<h2 class="card-subheading">Name of Reviewer</h2>
+				<div class="spaced-out horizontal">
+					<img>
+					<section>
+						<h3 class="card-heading">Artform</h3>
+						<p class="card-text">Review Content</p>
+					</section>
+				</div>
+			</article>
+		</template>
+	</div>
+</main>
+<footer>
+	<address>
+		<span>tlf: +47 923 85 123</span>
+		<span>email: help@craftvilla.com</span>
+		<span>craftvillastreet 78</span>
+		<span>mon-fri: 12.00-20.00</span>
+	</address>
+	<nav>
+		<a href="../../index.html">Home</a>
+		<a href="gallery.html">Gallery</a>
+		<a href="book.html">Book</a>
+		<a href="feedback.html">Feedback</a>
+	</nav>
+</footer>
+</body>
+</html>
