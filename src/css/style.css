@@ -81,7 +81,7 @@
 		color: var(--red-dark);
 		--underline-color: var(--red-dark);
 		background-color: var(--chalked-paper);
-		--border-color: var(--red-dark);
+		--border-color: var(--red-light);
 	}
 }
 
@@ -159,7 +159,7 @@
 	border-left: solid var(--border-color) 0.5rem;
 	border-right: solid var(--border-color) 0.25rem;
 
-	& h2 {
+	& h2, h3 {
 		font-size: var(--font-size-large);
 		letter-spacing: 16%;
 	}
@@ -305,9 +305,11 @@ img {
 .review-card {
 	width: var(--5u);
 	height: 236px;
+
 	& img {
 		height: 176px;
 	}
+
 	& .text-card {
 		width: 376px;
 	}
