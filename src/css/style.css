@@ -257,7 +257,7 @@ button, a.button-link {
 	&horizontal {
 		flex-direction: row;
 	}
-	&:vertical {
+	&vertical {
 		flex-direction: column;
 	}
 }
@@ -303,8 +303,13 @@ img {
 }
 
 .review-card {
+	width: var(--5u);
+	height: 236px;
 	& img {
-		height: 175px;
+		height: 176px;
+	}
+	& .text-card {
+		width: 376px;
 	}
 }
 
