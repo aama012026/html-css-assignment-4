@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Craftvilla - Book your workshop</title>
+</head>
+<body>
+<main class="spaced-out horizontal">
+	<section>
+		<h1 class="gold">Book your workshop</h1>
+		<fieldset id="select-artform">
+			<legend class="text-blue">Artform:</legend>
+			<div class="spaced-out horizontal">
+				<div>
+					<input type="radio" id="artform-acrylics" name="artform" value="acrylics">
+					<label for="artform-acrylics">Acrylics</label>
+
+					<input type="radio" id="artform-watercolors" name="artform" value="watercolors">
+					<label for="artform-watercolors">Watercolors</label>
+					
+					<input type="radio" id="artform-mosaic" name="artform" value="mosaic">
+					<label for="artform-mosaic">Mosaic</label>
+				</div>
+				<div id="info-view">
+					<template id="artform-info-template">
+						<p class="artform-info"></p>
+						<p class="artform-price"></p>
+					</template>
+				</div>
+			</div>
+		</fieldset>
+	</section>
+	<section id="calendar">
+		<div class="spaced-out horizontal">
+			<button id="previous-week">&lt;</button>
+			<h2 id="week-nr">Week X</h2>
+			<button id="next-week">&gt;</button>
+		</div>
+		<!--TODO: Visual state is only a mockup, but is set up to be hooked up to js.-->
+		<table>
+			<thead>
+				<tr>
+					<th>mon.</th>
+					<th>tue.</th>
+					<th>wed.</th>
+					<th>thu.</th>
+					<th>fri.</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>12.00</td>
+					<td>12.00</td>
+					<td>12.00</td>
+					<td class="unavailable">12.00</td>
+					<td>12.00</td>
+				</tr>
+				<tr>
+					<td>13.00</td>
+					<td class="unavailable">13.00</td>
+					<td>13.00</td>
+					<td class="unavailable">13.00</td>
+					<td>13.00</td>
+				</tr>
+				<tr>
+					<td class="selected">14.00</td>
+					<td class="unavailable">14.00</td>
+					<td>14.00</td>
+					<td class="unavailable">14.00</td>
+					<td>14.00</td>
+				</tr>
+				<tr>
+					<td>15.00</td>
+					<td>15.00</td>
+					<td>15.00</td>
+					<td class="unavailable">15.00</td>
+					<td>15.00</td>
+				</tr>
+				<tr>
+					<td>16.00</td>
+					<td>16.00</td>
+					<td>16.00</td>
+					<td class="unavailable">16.00</td>
+					<td>16.00</td>
+				</tr>
+				<tr>
+					<td>17.00</td>
+					<td>17.00</td>
+					<td class="unavailable">17.00</td>
+					<td>17.00</td>
+					<td class="unavailable">17.00</td>
+				</tr>
+				<tr>
+					<td>18.00</td>
+					<td>18.00</td>
+					<td class="unavailable">18.00</td>
+					<td>18.00</td>
+					<td class="unavailable">18.00</td>
+				</tr>
+			</tbody>
+		</table>
+	</section>
+</main>
+<footer>
+		<address>
+			<span>tlf: +47 923 85 123</span>
+			<span>email: help@craftvilla.com</span>
+			<span>craftvillastreet 78</span>
+			<span>mon-fri: 12.00-20.00</span>
+		</address>
+		<nav>
+			<a href="../../index.html">Home</a>
+			<a href="gallery.html">Gallery</a>
+			<a href="book.html">Book</a>
+			<a href="feedback.html">Feedback</a>
+		</nav>
+</footer>
+</body>
+</html>
