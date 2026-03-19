@@ -3,33 +3,37 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link href="src/css/style.css" rel="stylesheet">
+	<script src="src/js/main.js" type="module"></script>
+
 	<title>Craftvilla</title>
 </head>
 <body>
-	<header>
-		<address>
+	<header class="spaced-out horizontal green horizontal-padding vertical-padding-small">
+		<address class="xl thin">
 			<span>tlf: +47 923 85 123</span>
 			<span>email: help@craftvilla.com</span>
 			<span>craftvillastreet 78</span>
 			<span>mon-fri: 12.00-20.00</span>
 		</address>
 		<nav>
-			<a href="index.html">Home</a>
+			<a class="current" href="index.html">Home</a>
 			<a href="src/html/gallery.html">Gallery</a>
 			<a href="src/html/book.html">Book</a>
 			<a href="src/html/feedback.html">Feedback</a>
 		</nav>
 	</header>
 	<main>
-		<section class="spaced-out horizontal">
+		<section class="spaced-out horizontal standard-padding top-padding-large">
 			<div class="seven-point-five-16ths">
-				<h1 class="violet-light">Craftvilla</h1>
-				<p class="violet-light accent-text">Do you need to destress? Find your inner creative? A day with your spouse away from the kids or a playful
+				<h1 class="violet inverted">Craftvilla</h1>
+				<p class="violet inverted accent-text">Do you need to destress? Find your inner creative? A day with your spouse away from the kids or a playful
 					afternoon with your kids? Have you always wanted to try painting with proprer watercolors that blend the way you see on instagram?
 					Maybe you’ve painted models with acrylics before and want to try your hands on canvas painting?
 				</p>
-				<p class="violet-dark">Here at Craftvilla, you can do all of the above. We strive to create an <span class="light underlined">open</span>,
-					<span class="light underlined">accepting</span> and <span class="light underlined">welcoming</span> room for you to
+				<p class="violet inverted">Here at Craftvilla, you can do all of the above. We strive to create an <span class="thin underlined">open</span>,
+					<span class="thin underlined">accepting</span> and <span class="thin underlined">welcoming</span> room for you to
 					<span class="bold underlined">explore and express yourself.</span> We offer workshops in <i>acrylic painting</i>, <i>watercolors</i> and
 					<i>mosaic composition</i> with rocks and more. <span class="bold">Batteries included. <span class="italic">For all our workshops.</span></span>
 					That means we supply all the material you may need, and all you need to do is show up on time and bring your presence. All ages and all groups 
@@ -37,7 +41,7 @@
 					know to help you out <span class="bold">- <span class="underlined">so that you can focus on defocusing.</span></span>
 				</p>
 			</div>
-			<img class="square five-16ths" src="" alt="Table with painting equipment for a group.">
+			<img class="square five-16ths" src="assets/images/company/group-watercolor-space.jpg" alt="Table with painting equipment for a group.">
 		</section>
 		<div id="product-cards" class="spaced-out horizontal">
 			<article class="text-card red">
@@ -57,16 +61,16 @@
 					at the same time. Find your inner Zen or let out your creativity show to the rest of your group.</p>
 			</article>
 		</div>
-		<section>
+		<section class="standard-padding">
 			<div class="spaced-out horizontal">
-				<h2>Ready to find your inner creative?</h2>
-				<a class="button-link purple">book a workshop</a>
+				<h2 class="green inverted">Ready to find your inner creative?</h2>
+				<a href="src/html/book.html" class="button-link purple">book a workshop</a>
 			</div>
 			<p>Come as you are, no skill required, all material included. Build creative communication with your work team.
 				Bring your family and friends for a	stress-reducing afternoon. Get to know new people in your local circle.
 			</p>
 			<p>Are you looking for activities for your kindergarden, school, workplace, elder daycare or on behalf of another organization?
-				Call us on +47 923 85 123 or get in contact with our team on help.craftvilla.com! We want your experience to be frictionless and tailor fit.
+				Call us on +47 923 85 123 or get in contact with our team on help@craftvilla.com! We want your experience to be frictionless and tailor fit.
 			</p>
 		</section>
 		<div class="spaced-out horizontal">
@@ -75,8 +79,8 @@
 					<article class="review-card">
 						<h2 class="card-subheading">Name of Reviewer</h2>
 						<div class="spaced-out horizontal">
-							<img>
-							<section>
+							<img class="square">
+							<section class="text-card">
 								<h3 class="card-heading">Artform</h3>
 								<p class="card-text">Review Content</p>
 							</section>
@@ -88,7 +92,7 @@
 		<!-- TODO: A lot of nested structuring divs that cannot be sections as they are not identified. 
 		Might be possible to identify programmatically w. f.ex. aria-labels etc. -->
 		<div class="spaced-out vertical">
-			<div id="img-grid" data-column-count="3" data-row-count="2"></div>
+			<div class="img-grid" data-column-count="3" data-row-count="2"></div>
 			<a class="inside-flow" href="src/html/gallery.html">Look at more pictures in our gallery</a>
 		</div>
 	</main>
