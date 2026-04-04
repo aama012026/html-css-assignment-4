@@ -37,13 +37,13 @@
 					<span class="bold underlined">explore and express yourself.</span> We offer workshops in <i>acrylic painting</i>, <i>watercolors</i> and
 					<i>mosaic composition</i> with rocks and more. <span class="bold">Batteries included. <span class="italic">For all our workshops.</span></span>
 					That means we supply all the material you may need, and all you need to do is show up on time and bring your presence. All ages and all groups 
-					welcome, from 3 to 103. If you come with particularly young or old family members and need help watching, call ahead and we’ll make sure our staff
-					know to help you out <span class="bold">- <span class="underlined">so that you can focus on defocusing.</span></span>
+					welcome, from 3 to 103. If you come with particularly young or old family members and need help watching, call ahead and we’ll make sure our
+					staff know to help you out <span class="bold">- <span class="underlined">so that you can focus on defocusing.</span></span>
 				</p>
 			</div>
 			<img class="square five-16ths" src="assets/images/company/group-watercolor-space.jpg" alt="Table with painting equipment for a group.">
 		</section>
-		<div id="product-cards" class="spaced-out horizontal">
+		<div id="product-cards" class="spaced-evenly horizontal">
 			<article class="text-card red">
 				<h2 class="card-heading">Paint on canvas with acrylics</h2>
 				<p>Paint on canvas like the real masters, but in easy mode. Acrylics dry quicker and can be cleaned with water before they dry.
@@ -61,7 +61,7 @@
 					at the same time. Find your inner Zen or let out your creativity show to the rest of your group.</p>
 			</article>
 		</div>
-		<section class="standard-padding">
+		<section class="standard-padding no-bottom-padding">
 			<div class="spaced-out horizontal">
 				<h2 class="green inverted">Ready to find your inner creative?</h2>
 				<a href="src/html/book.html" class="button-link purple">book a workshop</a>
@@ -73,27 +73,29 @@
 				Call us on +47 923 85 123 or get in contact with our team on help@craftvilla.com! We want your experience to be frictionless and tailor fit.
 			</p>
 		</section>
-		<div class="spaced-out horizontal">
-			<div id="featured-reviews" class="spaced-out vertical five-16ths">
-				<template id="review-card-template">
-					<article class="review-card">
-						<h2 class="card-subheading">Name of Reviewer</h2>
-						<div class="spaced-out horizontal">
-							<img class="square">
-							<section class="text-card inverted">
-								<h3 class="card-heading">Artform</h3>
-								<p class="card-text">Review Content</p>
-							</section>
-						</div>
-					</article>
-				</template>
+		<div class="standard-padding">
+			<div class="spaced-out horizontal">
+				<div id="featured-reviews" class="spaced-evenly vertical five-16ths">
+					<template id="review-card-template">
+						<article class="review-card">
+							<h2 class="card-subheading">Name of Reviewer</h2>
+							<div class="spaced-out horizontal">
+								<img class="square">
+								<section class="text-card inverted">
+									<h3 class="card-heading">Artform</h3>
+									<p class="card-text">Review Content</p>
+								</section>
+							</div>
+						</article>
+					</template>
+				</div>
 			</div>
-		</div>
-		<!-- TODO: A lot of nested structuring divs that cannot be sections as they are not identified. 
-		Might be possible to identify programmatically w. f.ex. aria-labels etc. -->
-		<div class="spaced-out vertical">
-			<div class="img-grid" data-column-count="3" data-row-count="2"></div>
-			<a class="inside-flow" href="src/html/gallery.html">Look at more pictures in our gallery</a>
+			<!-- TODO: A lot of nested structuring divs that cannot be sections as they are not identified. 
+			Might be possible to identify programmatically w. f.ex. aria-labels etc. -->
+			<div class="spaced-out vertical">
+				<div class="img-grid" data-column-count="3" data-row-count="2"></div>
+				<a class="inside-flow" href="src/html/gallery.html">Look at more pictures in our gallery</a>
+			</div>
 		</div>
 	</main>
 </body>

@@ -23,6 +23,9 @@
 	--1u: 6.25vw;
 	--halfu: calc(var(--1u) * 0.5);
 	--quarteru: calc(var(--1u) * 0.25);
+	--eightu: calc(var(--1u) * 0.125);
+	--sixteenthu: calc(var(--eightu) * 0.5);
+	--sixtyfourthu: calc(var(--sixteenthu) * 0.25);
 	--1halfu: calc(var(--1u) + var(--halfu));
 	--4u: calc(var(--1u) * 4);
 	--4halfu: calc(var(--4u) + var(--halfu));
@@ -76,12 +79,17 @@
 	--underline-color: var(--chalked-paper);
 	background-color: var(--red-dark);
 	--border-color: var(--red-light);
-
-	&.inverted {
+	
+	& .inverted, &.inverted {
 		color: var(--red-dark);
 		--underline-color: var(--red-dark);
 		background-color: var(--chalked-paper);
-		--border-color: var(--red-light);
+		--border-color: var(--red-dark);
+	}
+	
+	&:has(.inverted) {
+		background-color: var(--red-light);
+		--border-color: var(--red-dark);
 	}
 }
 
@@ -90,21 +98,27 @@
 	--underline-color: var(--chalked-paper);
 	background-color: var(--green-dark);
 	--border-color: var(--green-light);
-
+	
 	header&, footer& {
 		background-color: var(--green-light);
 	}
-
-	&.inverted {
+	
+	&.inverted, & .inverted {
 		color: var(--green-dark);
 		--underline-color: var(--green-dark);
 		background-color: var(--chalked-paper);
+		
 		--border-color: var(--green-dark);
-
+		
 		h2& {
 			color: var(--green-light);
 			--underline-color: var(--green-light);
 		}
+	}
+	
+	&:has( .inverted) {
+		background-color: var(--green-light);
+		--border-color: var(--green-dark);
 	}
 }
 .violet {
@@ -112,25 +126,30 @@
 	--underline-color: var(--chalked-paper);
 	background-color: var(--blue-light);
 	--border-color: var(--violet-light);
-
-	&.inverted {
+	
+	& .inverted, &.inverted {
 		color: var(--blue-light);
 		--underline-color: var(--blue-light);
 		background-color: var(--chalked-paper);
 		--border-color: var(--blue-light);
-
+		
 		h1&, p.accent-text& {
 			color: var(--violet-light);
 			--underline-color: var(--violet-light);
 		}
-
+		
 		p& {
 			color: var(--violet-dark);
 			--underline-color: var(--violet-dark);
 		}
 	}
-
-	&:active {
+	
+	&:has(.inverted) {
+		background-color: var(--violet-light);
+		border-color: var(--blue-light);
+	}
+	
+	button&:active, .button-link&:active {
 		background-color: var(--violet-light);
 		--border-color: var(--blue-light);
 	}
@@ -149,7 +168,7 @@
 		--border-color: var(--purple-dark);
 	}
 
-	&:active {
+	button&:active, .button-link&:active {
 		background-color: var(--purple-light);
 		--border-color: var(--purple-dark);
 	}
@@ -162,7 +181,7 @@
 }
 
 .text-card {
-	padding: 1rem 2rem;
+	padding: var(--eightu) var(--quarteru);
 	border-top-left-radius: var(--corner-medium);
 	border-bottom-left-radius: var(--corner-large);
 	border-bottom-right-radius: var(--corner-large);
@@ -276,16 +295,27 @@ select, input, textarea {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	&.horizontal {
-		flex-direction: row;
-	}
-	&.vertical {
-		flex-direction: column;
-	}
+	
 }
 
-.standard-padding{
-	padding: var(--vertical-spacing) var(--horizontal-spacing)
+.spaced-evenly {
+	padding: var(--halfu);
+	display: flex;
+	align-items: stretch;
+	justify-content: space-evenly;
+	gap: var(--halfu);
+}
+
+.horizontal {
+	flex-direction: row;
+}
+
+.vertical {
+	flex-direction: column;
+}
+
+.standard-padding {
+	padding: var(--vertical-spacing) var(--horizontal-spacing);
 }
 
 .horizontal-padding {
@@ -299,6 +329,14 @@ select, input, textarea {
 
 .top-padding-large {
 	padding-top: var(--1u);
+}
+
+.large-gap {
+	gap: var(1u)
+}
+
+.no-bottom-padding {
+	padding-bottom: 0;
 }
 
 address, nav {
@@ -328,7 +366,9 @@ img {
 	width: var(--5u);
 	height: 236px;
 	border-radius: var(--corner-regular);
-	padding: 1rem;
+	border-left: 0.25rem solid var(--border-color);
+	padding: var(--sixteenthu);
+	padding-top: calc(var(--sixtyfourthu) * 3);
 
 	& h2 {
 		font-family: 'Noto Serif', serif;
