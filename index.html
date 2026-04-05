@@ -25,13 +25,14 @@
 		</nav>
 	</header>
 	<main>
-		<section class="spaced-out horizontal standard-padding top-padding-large">
+		<section class="spaced-out horizontal spacing-standard top-padding-large">
 			<div class="seven-point-five-16ths">
-				<h1 class="violet inverted">Craftvilla</h1>
+				<h1 class="violet inverted underlined display">Craftvilla</h1>
 				<p class="violet inverted accent-text">Do you need to destress? Find your inner creative? A day with your spouse away from the kids or a playful
 					afternoon with your kids? Have you always wanted to try painting with proprer watercolors that blend the way you see on instagram?
 					Maybe you’ve painted models with acrylics before and want to try your hands on canvas painting?
 				</p>
+				<br>
 				<p class="violet inverted">Here at Craftvilla, you can do all of the above. We strive to create an <span class="thin underlined">open</span>,
 					<span class="thin underlined">accepting</span> and <span class="thin underlined">welcoming</span> room for you to
 					<span class="bold underlined">explore and express yourself.</span> We offer workshops in <i>acrylic painting</i>, <i>watercolors</i> and
@@ -43,7 +44,7 @@
 			</div>
 			<img class="square five-16ths" src="assets/images/company/group-watercolor-space.jpg" alt="Table with painting equipment for a group.">
 		</section>
-		<div id="product-cards" class="spaced-evenly horizontal">
+		<div id="product-cards" class="spaced-evenly horizontal spacing-standard">
 			<article class="text-card red">
 				<h2 class="card-heading">Paint on canvas with acrylics</h2>
 				<p>Paint on canvas like the real masters, but in easy mode. Acrylics dry quicker and can be cleaned with water before they dry.
@@ -61,40 +62,40 @@
 					at the same time. Find your inner Zen or let out your creativity show to the rest of your group.</p>
 			</article>
 		</div>
-		<section class="standard-padding no-bottom-padding">
+		<section class="spacing-standard no-bottom-padding">
 			<div class="spaced-out horizontal">
-				<h2 class="green inverted">Ready to find your inner creative?</h2>
+				<h2 class="green inverted underlined display">Ready to find your inner creative?</h2>
 				<a href="src/html/book.html" class="button-link purple">book a workshop</a>
 			</div>
 			<p>Come as you are, no skill required, all material included. Build creative communication with your work team.
-				Bring your family and friends for a	stress-reducing afternoon. Get to know new people in your local circle.
+				Bring your family and friends for a stress-reducing afternoon. Get to know new people in your local circle.
 			</p>
 			<p>Are you looking for activities for your kindergarden, school, workplace, elder daycare or on behalf of another organization?
 				Call us on +47 923 85 123 or get in contact with our team on help@craftvilla.com! We want your experience to be frictionless and tailor fit.
 			</p>
 		</section>
-		<div class="standard-padding">
-			<div class="spaced-out horizontal">
-				<div id="featured-reviews" class="spaced-evenly vertical five-16ths">
-					<template id="review-card-template">
-						<article class="review-card">
-							<h2 class="card-subheading">Name of Reviewer</h2>
-							<div class="spaced-out horizontal">
-								<img class="square">
-								<section class="text-card inverted">
-									<h3 class="card-heading">Artform</h3>
-									<p class="card-text">Review Content</p>
-								</section>
-							</div>
-						</article>
-					</template>
-				</div>
+		<div class="spaced-out horizontal spacing-standard">
+			<div id="featured-reviews" class="spaced-out vertical five-16ths">
+				<template id="review-card-template">
+					<article class="review-card">
+						<h2 class="card-subheading">Name of Reviewer</h2>
+						<div class="spaced-out horizontal">
+							<img class="square">
+							<section class="text-card inverted">
+								<h3 class="card-heading">Artform</h3>
+								<p class="card-text">Review Content</p>
+							</section>
+						</div>
+					</article>
+				</template>
 			</div>
 			<!-- TODO: A lot of nested structuring divs that cannot be sections as they are not identified. 
 			Might be possible to identify programmatically w. f.ex. aria-labels etc. -->
-			<div class="spaced-out vertical">
-				<div class="img-grid" data-column-count="3" data-row-count="2"></div>
-				<a class="inside-flow" href="src/html/gallery.html">Look at more pictures in our gallery</a>
+			<div class="spaced-out vertical violet dark corners-small eight-16ths">
+				<div class="img-grid margin-xs" data-columns="3" data-rows="2"></div>
+				<a class="mid-flow inverted margin-xs corners-small padding-xs spaced-evenly"
+					href="src/html/gallery.html">Look at more pictures in our gallery
+				</a>
 			</div>
 		</div>
 	</main>

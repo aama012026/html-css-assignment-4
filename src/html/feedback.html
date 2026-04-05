@@ -5,13 +5,16 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 	<link href="../css/style.css" rel="stylesheet">
+	<script src="../js/main.js" type="module"></script>
 	<title>Craftvilla - Give us feedback</title>
 </head>
 <body>
-<main class="spaced-out horizontal standard-padding">
-	<div class="eight-16ths">
-		<h1 class="text-blue">Tell us your thoughts</h1>
-		<h2 class="violet-light">Help us get better</h2>
+<main class="spaced-out horizontal spacing-standard">
+	<div class="eight-16ths spaced-out vertical">
+		<div>
+			<h1 class="text-blue small">Tell us your thoughts</h1>
+			<h2 class="violet inverted bold">Help us get better</h2>
+		</div>
 		<form id="feedback-form">
 			<select name="artform" id="artform-select" class="text-blue">
 				<option value="acrylics">Acrylics</option>
@@ -29,13 +32,13 @@
 			<button type="submit" class="purple">send</button>
 		</form>
 	</div>
-	<div id="example-reviews" class="spaced-out vertical five-point-five-16ths">
+	<div id="featured-reviews" class="spaced-out vertical five-point-five-16ths">
 		<template id="review-card-template">
 			<article class="review-card">
 				<h2 class="card-subheading">Name of Reviewer</h2>
 				<div class="spaced-out horizontal">
-					<img>
-					<section>
+					<img class="square">
+					<section class="text-card inverted">
 						<h3 class="card-heading">Artform</h3>
 						<p class="card-text">Review Content</p>
 					</section>

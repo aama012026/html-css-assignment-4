@@ -5,29 +5,35 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	
 	<link href="../css/style.css" rel="stylesheet">
+	<script src="../js/main.js" type="module"></script>
 	<title>Craftvilla - Book your workshop</title>
 </head>
 <body>
-<main class="spaced-out horizontal">
-	<section>
-		<h1 class="gold">Book your workshop</h1>
+<main class="spaced-evenly horizontal spacing-standard">
+	<section class="spaced-out vertical small-gap">
+		<h1 class="gold small">Book your workshop</h1>
 		<fieldset id="select-artform">
-			<legend class="text-blue">Artform:</legend>
+			<legend class="text-blue xl bold">Artform:</legend>
 			<div class="spaced-out horizontal">
 				<div>
-					<input type="radio" id="artform-acrylics" name="artform" value="acrylics">
-					<label for="artform-acrylics">Acrylics</label>
-
-					<input type="radio" id="artform-watercolors" name="artform" value="watercolors">
-					<label for="artform-watercolors">Watercolors</label>
-					
-					<input type="radio" id="artform-mosaic" name="artform" value="mosaic">
-					<label for="artform-mosaic">Mosaic</label>
+					<div>
+						<input type="radio" id="artform-acrylics" name="artform" value="acrylics">
+						<label for="artform-acrylics" class="text-blue">acrylics</label>
+					</div>
+					<div>
+						<input type="radio" id="artform-watercolors" name="artform" value="watercolors">
+						<label for="artform-watercolors" class="text-blue">watercolors</label>
+					</div>
+					<div>
+						<input type="radio" id="artform-mosaic" name="artform" value="mosaic">
+						<label for="artform-mosaic" class="text-blue">mosaic</label>
+					</div>
 				</div>
 				<div id="info-view">
 					<template id="artform-info-template">
-						<p class="artform-info"></p>
-						<p class="artform-price"></p>
+						<p class="artform-info"><b>Set includes: </b></p>
+						<br>
+						<p class="artform-price"><b>Price: </b></p>
 					</template>
 				</div>
 			</div>
@@ -35,7 +41,7 @@
 		<button class="purple">book a workshop</button>
 		<img id="selected-artform-img" src="../../assets/images/company/acrylics-station.jpg">
 	</section>
-	<section id="calendar">
+	<section id="calendar" class="spaced-out vertical">
 		<div class="spaced-out horizontal">
 			<button id="previous-week">&lt;</button>
 			<h2 id="week-nr">Week X</h2>
