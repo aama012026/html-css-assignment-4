@@ -2,7 +2,7 @@ import { reviews } from "../../assets/data/reviews.js";
 import { artforms } from "../../assets/data/artforms.js";
 
 const currentPage = document.querySelector('a.current').textContent;
-console.log(currentPage);
+const assetsPath = currentPage == 'Home' ? './assets' : '../../assets';
 
 const imageGrids = document.querySelectorAll('.img-grid');
 const reviewCardTemplate = document.getElementById('review-card-template');
@@ -52,7 +52,7 @@ function populateImageGrids(gridElements) {
 			images.splice(i, 1);
 			const imageElement = document.createElement('img');
 			imageElement.classList.add('square');
-			imageElement.src = `../../assets/images/user/${image}`;
+			imageElement.src = `${assetsPath}/images/user/${image}`;
 			imageElement.alt = 'An image submitted by a participant';
 			el.appendChild(imageElement);
 		}
@@ -65,7 +65,7 @@ function makeReviewCard(reviewData, artForm, colorClass) {
 	cardFragment.querySelector('h2').textContent = name;
 	cardFragment.querySelector('h3').textContent = artForm;
 	cardFragment.querySelector('p').textContent = text;
-	cardFragment.querySelector('img').src = currentPage == 'Home' ? `./assets/images/user/${img}` : `../../assets/images/user/${img}`;
+	cardFragment.querySelector('img').src = `${assetsPath}/images/user/${img}`;
 	cardFragment.querySelector('img').alt = 'An image submitted by a participant';
 	cardFragment.querySelector('article').classList.add(colorClass);
 	return cardFragment;
@@ -80,7 +80,7 @@ function setArtformInfo(selectedArtform) {
 			infoFragment.querySelector('.artform-price').innerHTML += price;
 			artformInfoView.innerHTML = '';
 			artformInfoView.appendChild(infoFragment);
-			selectedArtformImg.src = `../../assets/${image.source}`;
+			selectedArtformImg.src = `${assetsPath}/${image.source}`;
 			selectedArtformImg.alt = image.alt;
 		}
 	});
