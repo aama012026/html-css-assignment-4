@@ -65,7 +65,7 @@ function makeReviewCard(reviewData, artForm, colorClass) {
 	cardFragment.querySelector('h2').textContent = name;
 	cardFragment.querySelector('h3').textContent = artForm;
 	cardFragment.querySelector('p').textContent = text;
-	cardFragment.querySelector('img').src = currentPage == 'Home' ? `/assets/images/user/${img}` : `../../assets/images/user/${img}`;
+	cardFragment.querySelector('img').src = currentPage == 'Home' ? `./assets/images/user/${img}` : `../../assets/images/user/${img}`;
 	cardFragment.querySelector('img').alt = 'An image submitted by a participant';
 	cardFragment.querySelector('article').classList.add(colorClass);
 	return cardFragment;
