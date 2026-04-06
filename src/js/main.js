@@ -10,6 +10,7 @@ const featuredReviews = document.getElementById('featured-reviews');
 const selectArtform = document.getElementById('select-artform');
 const artformInfoTemplate = document.getElementById('artform-info-template');
 const artformInfoView = document.getElementById('info-view');
+const selectedArtformImg = document.getElementById('selected-artform-img');
 
 if (featuredReviews) {
 	const acrylicFragment = makeReviewCard(getRandomReview(0), 'acrylic', 'red');
@@ -73,12 +74,14 @@ function makeReviewCard(reviewData, artForm, colorClass) {
 function setArtformInfo(selectedArtform) {
 	artforms.forEach(artform => {
 		if(artform.name == selectedArtform) {
-			const {info, price} = artform;
+			const {info, price, image} = artform;
 			const infoFragment = document.importNode(artformInfoTemplate.content, true);
 			infoFragment.querySelector('.artform-info').innerHTML += info;
 			infoFragment.querySelector('.artform-price').innerHTML += price;
 			artformInfoView.innerHTML = '';
 			artformInfoView.appendChild(infoFragment);
+			selectedArtformImg.src = `../../assets/${image.source}`;
+			selectedArtformImg.alt = image.alt;
 		}
 	});
 }
